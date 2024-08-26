@@ -1,0 +1,42 @@
+{% load static %}  <!--necessario para carregar arquivos estaticos-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <title>INDEX</title>
+</head>
+<body>
+    <center>
+    <H1>Index</H1>
+
+    <img src="{% static 'images/django_1.png' %}">
+    <br>
+
+    <table>
+        <thead>
+            <tr><strong> Produtos </strong></tr>
+            <tr><strong> Preço </strong></tr>
+            <tr><strong> Estoque </strong></tr>
+        </thead>
+        <tbody>
+        {% for produto in produtos %}
+            <tr>
+                <td><a href="{% url 'produto' produto.id %}"> {{produto.nome}}</a></td>
+                <td>{{produto.preco}}</td>
+                <td>{{produto.estoque}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <button onclick='teste()'> Click aqui babaca </button>
+
+    <script type="text/javascript" src="{% static 'js/script.js' %}" ></script>
+
+    </center>
+</body>
+</html>

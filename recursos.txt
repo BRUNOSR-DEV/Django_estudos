@@ -1,0 +1,13 @@
+
+Dentro do ambiente virtual - "django-admin startproject django1 ."
+
+Para executar o servidor "py manage.py runserver"
+
+Para criar migrations "py manage.py makemigrations"
+Para certificar migrate "py manage.py migrate"
+
+Para criar super usuario "py manage.py createsuperuser"
+
+para criar staticfiles - "py manage.py collectstatic"
+
+whitenoise é para trabalhar com arquivos estaticos (modo de produção) - gunicorn roda aplicações py - "pip install whitenoise gunicorn"
